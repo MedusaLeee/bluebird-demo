@@ -24,7 +24,7 @@ var fun2 = async_sum(2);
 var fun3 = async_sum(3);
 var arr = [fun1, fun2, fun3];
 //第一参数是要执行的数组，第二个参数是数组中执行正确的返回值的个数
-//设第二个参数为param2，如果有param2个数组正确返回，数组内其他的方法不再执行
+//设第二个参数为param2，如果有param2个数组内方法正确返回，数组内其他的方法不再执行
 Promise.some(arr,1).then((result)=>{
 	//result的长度为1
 	console.log('result--1 ',result);
