@@ -37,6 +37,17 @@ Promise.all([
 }).catch((error)=>{
 	console.log("error--1 ",error);
 });
+//使用spread格式化出,spread会把返回的数组对应到参数，如arr = [1,2],使用spread((value1, value2)=>{}),
+//则arr[0]会自动赋值给value1, arr[1]会自动赋值给value2，就可以不用和async一样使用数组下标访问了，增加可读性
+Promise.all([
+	async_fun1(),
+	async_fun2(1)
+]).spread((value1, value2)=>{
+	//value1对应数组一个元素的返回结果，value2对应数组第2个元素的返回结果
+	console.log("data--1 ",value1, value2);
+}).catch((error)=>{
+	console.log("error--1 ",error);
+});
 //有异常的情况
 Promise.all([
 	async_fun1(),
