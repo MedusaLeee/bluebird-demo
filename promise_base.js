@@ -71,7 +71,7 @@ result2
 		console.log('result2-error--3', error);
 	});
 
-//快速整成一个Promise
+//快速生成一个Promise
 //返回的成功的promise
 var resolvedPromise = Promise.resolve('成功的promise');
 //返回的错误的promise
